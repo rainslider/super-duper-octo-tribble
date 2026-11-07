@@ -1,0 +1,16 @@
+/* account maken */
+#auth{background:radial-gradient(ellipse at 50% 0,#12304D,#050A12 70%)}
+#auth.on{display:flex;align-items:center;justify-content:center;padding:16px}
+#rain{position:absolute;inset:0;width:100%;height:100%}
+#auth::after{content:"";position:absolute;inset:0;background:#cfe8ff;opacity:0;pointer-events:none}
+#auth.flash::after{animation:fl .5s}
+@keyframes fl{0%{opacity:.55}15%{opacity:0}30%{opacity:.4}100%{opacity:0}}
+.gl{position:relative;z-index:1;width:100%;max-width:420px;padding:28px;border-radius:24px;background:rgba(18,29,48,.72);backdrop-filter:blur(14px);border:1px solid rgba(56,189,248,.35);box-shadow:0 0 60px rgba(56,189,248,.18)}
+.gl h2{margin:0 0 4px;font-size:28px}.gl p{margin:0 0 18px;color:var(--m)}
+.bolt{filter:drop-shadow(0 0 8px var(--b));animation:glow 3s infinite}@keyframes glow{50%{filter:drop-shadow(0 0 16px var(--b))}}
+.pv{display:flex;align-items:center;gap:12px;width:100%;min-height:50px;margin-bottom:10px;padding:0 16px;border-radius:14px;border:1px solid var(--l);background:rgba(10,18,32,.7);color:var(--t);font-weight:600}
+.pv:hover{border-color:var(--a)}.pv.r{background:linear-gradient(90deg,#0EA5E9,#38BDF8);color:#06202E;border:0}
+.tabs{display:flex;gap:6px;margin-bottom:16px;padding:4px;border-radius:999px;background:var(--bg)}
+.tabs button{flex:1;min-height:40px;border:0;border-radius:999px;background:none;color:var(--m);font-weight:600}.tabs .on{background:var(--l);color:var(--t)}
+.x{position:absolute;top:14px;right:16px;z-index:2;min-width:44px;min-height:44px;border-radius:50%;border:1px solid var(--l);background:var(--s);color:var(--t);font-size:20px}
+@media (prefers-reduced-motion:reduce){#auth.flash::after,.bolt{animation:none}}
